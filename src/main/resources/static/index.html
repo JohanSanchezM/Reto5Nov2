@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="misFunciones/Tipo.js"></script>  
+    <script type="text/javascript" src="misFunciones/Auditorio.js"></script>
+    <script type="text/javascript" src="misFunciones/Cliente.js"></script>
+    <script type="text/javascript" src="misFunciones/Mensaje.js"></script>
+    <script type="text/javascript" src="misFunciones/Reservaciones.js"></script>
+    <script type="text/javascript" src="misFunciones/Reportes.js"></script>
+
+    <title>Programa Auditorios</title>
+</head>
+
+<body>
+    <h1>Programa Auditorios</h1>
+    <h2>Tipo</h2>
+    <div id="resultado1"></div>
+    <script type="text/javascript"> 
+    window.onload = autoInicioTipo();
+    </script>
+    <div>
+        <input type="text" id="Tname" placeholder="nombre">
+        <input type="text" id="Tdescription" placeholder="descripción">
+  
+    </div>
+    <button onclick="guardarInformacionTipo()">Guardar Tipo</button>
+
+    <h2>Auditorios</h2>
+    <div id="resultado2"></div>
+    <script type="text/javascript"> 
+    window.onload = autoInicioAuditorios();
+    </script>
+    <div>
+        <input type="text" id="Aname" placeholder="Nombre">
+        <input type="text" id="Aowner" placeholder="Dueño">
+        <input type="number" id="Acapacity" placeholder="Capacidad">
+        <input type="text" id="Adescription" placeholder="descripción">
+        <select id="select-tipo"></select>
+    </div>
+    <button onclick="guardarInformacionAuditorios()">Guardar Auditorios</button>
+   
+
+<h2>Cliente </h2>
+<div id="resultado3"></div>
+<script type="text/javascript"> 
+window.onload = autoInicioCliente();
+</script>
+<div>
+    <input type="text" id="Cemail" placeholder="email">
+    <input type="text" id="Cpassword" placeholder="password">
+    <input type="text" id="Cname" placeholder="nombre">
+    <input type="number" id="Cage" placeholder="edad">
+</div>
+<button onclick="guardarInformacionCliente()">Guardar Cliente</button>
+
+
+<h2>Reservaciones</h2>
+<div id="resultado5"></div>
+<script type="text/javascript"> 
+window.onload = autoInicioReservaciones();
+</script>
+<div>
+    <input type="date" id="RstartDate" placeholder="Fecha de Prestamo">
+    <input type="date" id="RdevolutionDate" placeholder="Fecha de Devolución">
+    
+</div>
+<button onclick="guardarInformacionReservaciones()">Guardar Mensaje</button>
+
+<h2>Mensaje</h2>
+<div id="resultado4"></div>
+<script type="text/javascript"> 
+window.onload = autoInicioMensaje();
+</script>
+<div>
+    <input type="text" id="MmessageText" placeholder="Mensaje">
+
+</div>
+<button onclick="guardarInformacionMensaje()">Guardar Mensaje</button>
+
+<h2>Reportes</h2>
+    <button onclick ="traerReportesStatus()"> Generar Reportes Status Reservas</button>
+    <div id="resultadoStatus"></div>
+
+    <input type="date" id="RpstartDate" placeholder="Descripción">
+    <input type="date" id="RpdevolutionDate" placeholder="Descripción">
+    <button onclick="traerReportesDate()">Generar Reporte por Fecha</button>
+    <div id="resultadoDate"></div>
+
+    <button onclick="traerReportesClientes()">Generar Reporte Clientes y Cantidad de Reservas por Cliente</button>
+    <div id="resultadoClientes"></div>
+
+  
+
+</body>
+
+
+</html>
